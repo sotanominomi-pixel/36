@@ -1,0 +1,24 @@
+.time-display {
+  font-weight:600;
+  font-size: calc(36px + 10vw);
+  line-height:1;
+  letter-spacing:2px;
+}
+
+.btn-lap, .btn-reset, #addAlarmBtn {
+  background:#f2f2f2; color:#000; border:1px solid #666;
+}
+
+.alarm-item { display:flex; justify-content:space-between; align-items:center; margin:4px 0; }
+.alarm-item .switch { position:relative; display:inline-block; width:40px; height:24px; }
+.alarm-item .switch input {opacity:0;width:0;height:0;}
+.alarm-item .slider {
+  position:absolute; cursor:pointer; top:0; left:0; right:0; bottom:0;
+  background:#ccc; transition:.4s; border-radius:24px;
+}
+.alarm-item .slider:before {
+  position:absolute; content:""; height:18px; width:18px; left:3px; bottom:3px;
+  background:white; transition:.4s; border-radius:50%;
+}
+.alarm-item input:checked + .slider { background:#666; }
+.alarm-item input:checked + .slider:before { transform:translateX(16px); }
